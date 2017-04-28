@@ -1,0 +1,676 @@
+/*
+ 300 Light
+ 400 Regular
+ 600 SemiBold
+ 700 Bold
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700');
+
+body,html{
+	height: 100%;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #fff;
+  outline: none;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus{
+    text-decoration: none;
+}
+
+.bgcover{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.clear{
+    clear: both;
+}
+
+
+
+/* remove outer padding */
+.main .row{
+	padding: 0px;
+	margin: 0px;
+}
+
+.sidebar-nav{
+    width: 260px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    z-index: 9;
+    -webkit-box-shadow: 5px 0px 16px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow:    5px 0px 16px 0px rgba(0, 0, 0, 0.34);
+    box-shadow:         5px 0px 16px 0px rgba(0, 0, 0, 0.34);
+}
+
+.sidebar-nav .nav-toggle{
+    display: none;
+}
+
+.sidebar-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+.sidebar-nav li a{
+    display: block;
+    text-transform: uppercase;
+    background: #fff;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 40px;
+    color: #214F72;
+}
+
+.sidebar-nav li a span{
+    display: none;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.current-item-menu a{
+    color: #00C1ED;
+}
+
+.sidebar-nav li.current-menu-item a span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #00C1ED;
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -15px;
+}
+
+.sidebar-nav li.menu-phone a,
+.sidebar-nav li.menu-contact a{
+    text-transform: none;
+}
+
+.sidebar-nav li.menu-phone a strong,
+.sidebar-nav li.menu-contact a strong{
+    text-transform: none;
+    color: #00C1ED;
+    font-weight: 700;
+}
+
+.sidebar-nav li.menu-phone,
+.sidebar-nav li.menu-contact{
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+    text-align: right;
+}
+
+.sidebar-nav li.menu-contact{
+    bottom: 50px;
+}
+
+
+.main{    
+    padding-left: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+    border-bottom: 15px solid #00FF00;
+}
+
+h1.logo a{
+    display: block;
+    width: 182px;
+    height: 59px;
+    background: url("../img/logo.png") no-repeat 0 0;
+    background-size: 100%;
+    text-indent: -9999px;
+    margin: 100px auto;
+}
+
+
+/*=================================================================
+#fullslider
+==================================================================*/
+
+#fullslider{
+    width: 100%;
+    height: 100%;    
+    position: relative;
+}
+
+
+#fullslider .item{
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+
+
+#fullslider .item h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#fullslider .item h3 strong{
+    color: #00FF00;
+    font-weight: 400;
+}
+
+#fullslider .item.item1 h3{
+    width: 543px;
+    height: 200px;
+    padding-top: 146px;
+    background: url("../img/linea_slide1.png") no-repeat right top;
+    position: absolute;
+    bottom: 142px;
+    right: 0;
+}
+
+#fullslider .item.item2 h3{
+    width: 340px;
+    height: 344px;
+    background: url(../img/linea_slide2.png) no-repeat left top;
+    position: absolute;
+    top: 0px;
+    right: 92px;
+    padding: 232px 0 0 80px;
+}
+
+#fullslider .item.item3 h3{
+width: 956px;
+    height: 330px;
+    background: url(../img/linea_slide3.png) no-repeat right top;
+    position: absolute;
+    bottom: 120px;
+    right: -71px;
+    padding: 240px 0 0 0px;
+}
+
+#fullslider .item.item4 h3{
+    width: 862px;
+    height: 358px;
+    background: url("../img/linea_slide4.png") no-repeat right bottom;
+    position: absolute;
+    top: 160px;
+    right: 0;
+}
+
+
+.fullslidercontrols{
+    position: absolute;
+    bottom: 45%;
+    right: 20px;
+    z-index: 100;
+}
+
+.fullslidercontrols a{
+    display: block;    
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid #00FF00;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: 10px;
+    text-indent: -9999px;
+}
+
+.fullslidercontrols a.active{
+    background: #00FF00;
+}
+
+.fullslidercontrols .prev, 
+.fullslidercontrols .next{
+    display: none;
+}
+
+
+#quienes-somos{
+    background: #00C1ED;    
+}
+
+#quienes-somos .contenedor{
+    padding-left: 50px;
+}
+
+#quienes-somos .icon{
+    display: inline-block;
+    font-style: normal;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #000; 
+    border-left: 8px solid transparent;
+}
+
+#quienes-somos h2{
+    font-size: 42px;
+    font-weight: 600;
+    color: #214F72;
+    font-family: 'Open Sans', sans-serif;
+    margin: 60px 0 0 0;
+}
+
+#quienes-somos .sep{
+    height: 50px;
+}
+
+#quienes-somos h3{
+    font-size: 42px;
+    font-weight: 600;
+    color: #00FF00;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#quienes-somos p{
+    color: #214F72;
+    font-weight: 400;
+}
+
+#quienes-somos .hexagono{
+    height: 500px;
+    background: url("../img/hexagono_bg.png") no-repeat left center;
+    text-align: right;
+    padding: 118px 70px 0 100px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+
+#quienes-somos .hexagono p{
+    font-size: 13px;
+}
+
+#quienes-somos .hexagono h3{
+    font-size: 28px;
+    margin: 0 0 15px 0;
+}
+
+
+
+#servicios{
+    background: #214F72;    
+}
+
+#servicios .contenedor{
+    overflow: hidden;
+    padding: 50px;
+}
+
+#servicios ul.services_collapse{
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 450px;
+    z-index: 999;
+}
+
+#servicios ul.services_collapse li{
+    border-bottom: 1px solid #00FF00;
+    margin: 0 20% 0px 0;
+    padding: 20px 50px 10px 0;
+    background: #214F72;    
+}
+
+#servicios ul.services_collapse li > a{
+    text-indent: -16px;
+    display: block;
+    color: #00FF00;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+#servicios ul.services_collapse li > a:hover,
+#servicios ul.services_collapse li > a:active,
+#servicios ul.services_collapse li > a:focus{
+    color: #00FF00;
+}
+
+
+#servicios ul.services_collapse li > a:before{
+    font-family: FontAwesome;
+    content: "\f0d7";
+    margin-right: 5px;
+}
+
+#servicios ul.services_collapse li > a.collapsed:before{
+    content: "\f0da";
+    margin-right: 8px;
+}
+
+#servicios ul.services_collapse li > p{
+    color: #fff;
+    margin-top: 5px;
+}
+
+#servicios h2{
+    text-align: right;
+    font-size: 29px;
+    color: #00C1ED;
+    margin-top: 40px;
+}
+
+#servicios h2 span{
+    display: block;
+    width: 53px;
+    height: 89px;
+    background: url("../img/bg_services.png") no-repeat 0 0;
+    position: absolute;
+    top: -50px;
+    left: 140px;
+}
+
+#servicios h3{    
+    font-size: 42px;
+    color: #00FFFF;
+    font-weight: 300; 
+    margin-bottom: 20px;       
+}
+
+#servicios .sep{
+    height: 68px;
+}
+
+#servicios p{
+    color: #fff;
+    font-size: 13px;
+}
+
+#servicios .icon{
+    display: inline-block;
+    font-style: normal;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #fff; 
+    border-left: 8px solid transparent;
+    margin-right: 3px;    
+}
+
+
+
+#contacto{
+    background-image: url("../img/bg-contacto.jpg");
+}
+
+#contacto .form{
+    width: 438px;
+    margin: 100px auto 0;
+}
+
+#contacto .form h2{
+    font-size: 40px;
+    color: #00C1ED;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#contacto .form h3{
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 38px;
+    line-height: 32px;
+}
+
+#contacto .form input{
+    width: 100%;
+    height: 38px;
+    border-radius: 0;
+    padding: 0 13px;
+    color: #214F72;
+    border: 2px solid #fff;
+}
+
+#contacto .form input.error{
+    border: 2px solid red;
+}
+
+#contacto .form textarea{
+    width: 100%;
+    height: 93px;
+    padding: 13px;
+    resize: none;
+}
+
+#contacto .form input.boton{
+    width: 100px;
+    height: 28px;
+    background: #214F72;
+    color: #00FF00;
+    border: 0;
+    float: right;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#contacto .form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #214F72;
+}
+#contacto .form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #214F72;
+   opacity:  1;
+}
+#contacto .form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #214F72;
+   opacity:  1;
+}
+#contacto .form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #214F72;
+}
+
+
+
+
+/*=================================================================
+* RESPONSIVO *
+==================================================================*/
+
+/* MONITORES 1024 */
+@media screen and (max-width:800px) {
+    body,html{    	
+        overflow: auto;            
+    }
+
+    .bgcover{
+        background-position: left bottom;        
+    }
+
+    .sidebar-nav{        
+        width: 100%;
+        height: 50px;
+        -webkit-box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow:    0px 5px 16px 0px rgba(0, 0, 0, 0.34);
+        box-shadow:         0px 5px 16px 0px rgba(0, 0, 0, 0.34);
+        background: #fff;
+    }
+    
+    .sidebar-nav ul{
+        display: none;
+        clear: both;
+        padding: 20px 0;
+        background: #fff;
+    }
+    
+    .sidebar-nav li{
+        display: block;
+    }
+    
+    .sidebar-nav li a {
+        padding-left: 22px;
+    }
+    
+    .sidebar-nav .nav-toggle{
+        display: block;
+        font-size: 24px;
+        color: #214F72;
+        position: absolute;
+        top: 4px;
+        right: 20px;
+    }
+        
+    .sidebar-nav li.menu-phone,
+    .sidebar-nav li.menu-contact{
+        position: relative;
+        bottom: auto;
+        right: auto;
+        text-align: left;
+    }
+    
+    .sidebar-nav li.menu-contact{
+        bottom: auto;
+    }    
+    
+    
+    .main{    
+        padding-left: 0;
+        position: relative;
+        top: auto;
+        left: auto;
+        border-bottom: 15px solid #00FF00;
+        margin-top: 50px;
+    }
+    
+    h1.logo a{        
+        width: 100px;
+        height: 32px;
+        float: left;
+        margin: 8px 0 0 20px;
+    }
+    
+    #fullslider .item.item1 h3,
+    #fullslider .item.item2 h3,
+    #fullslider .item.item3 h3,
+    #fullslider .item.item4 h3{
+        font-size: 24px;
+        background: none;
+        position: absolute;
+        top: 15px !important;
+        right: inherit !important;
+        bottom: 15px;
+        left: 15px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .main{
+        height: auto;
+    } 
+    
+    .main#home{
+        height: 100%;
+    }
+    
+    #quienes-somos .contenedor{
+        padding: 0;
+    }
+    
+    #quienes-somos h2,
+    #quienes-somos h3 {
+        font-size: 18px; 
+        margin: 15px;
+    }
+    
+    #quienes-somos .sep{
+        height: 10px;
+    }
+    
+    #quienes-somos .hexagono {
+        padding: 68px 20px 0 100px;
+        position: relative;
+        top: 0;
+        right: -15px;
+        margin: 20px 0 20px 0;
+    }
+    
+    #servicios ul.services_collapse{
+        position: relative;
+        left: 0px;
+        width: 100%;        
+    }   
+    
+    #servicios ul.services_collapse li{
+        border-bottom: 1px solid #00FF00;
+        margin: 0;
+        padding: 20px 50px 10px 0;
+        background: #214F72;    
+    }
+    
+    #servicios .contenedor {        
+        padding: 10px;
+    }
+    
+    #servicios h2,
+    #servicios h3{
+        font-size: 20px;           
+    }
+    
+    #servicios h2 span{
+        background: none;
+    }
+    
+    #contacto{
+        overflow: hidden;
+    }
+    
+    #contacto .form h2{    
+        font-size: 36px;
+    }
+    
+    #contacto .form h3{
+        font-size: 16px;
+        line-height: normal;
+    }
+    
+    #contacto .form{
+        width: 90%;
+        overflow: hidden;
+        margin: 30px auto;
+    }
+    
+    
+}
+
